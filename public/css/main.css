@@ -3377,3 +3377,8 @@ h1.arrow {
 .hidden-md-show {
   display: none
 }
+
+
+.maxwidth {
+    max-width: 100%;
+}

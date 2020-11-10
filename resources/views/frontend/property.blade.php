@@ -18,8 +18,8 @@ config('properties.text.slogan'),
 'tab'=>config('properties.text.property')])
 
 <!-- Start property Area -->
-<section class="property-area relative" id="property" style="margin-top: 50px">
-	<div class="container fullwidth">
+<section class="property-area relative p_120" id="property" style="margin-top: 50px">
+	<div class="container main">
 		<div style="text-align: center">
 			<h1 class="arrow">{{config('properties.text.new_vacant_rental_property')}}</h1>
 		</div>
