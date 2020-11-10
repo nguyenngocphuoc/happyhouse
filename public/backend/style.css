@@ -1,0 +1,27 @@
+.box-img {
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+.user-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bgimage {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 34px;
+}
+@media screen and (max-width: 767px) {
+    .mobile-hide {
+        display: none;
+    }
+    .mobile-show {
+        display: block !important; 
+    }
+}
+
+.mobile-show {
+    display: none;
+}

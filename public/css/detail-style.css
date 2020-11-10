@@ -1,0 +1,838 @@
+@charset "utf-8";
+/*
+Theme Name: MUSASHI CHINTAI
+Theme URI: 
+Author: NARTS
+Author URI: http://www.narts.jp
+Description: Bootstrap3対応テーマ
+Version: 0.1.0
+*/
+
+body { /* フォントをWin-メイリオに */
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+header { 
+	background-color: #fff;
+	width: 100%;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #74ccf4;
+}
+
+header h1 {
+	font-size: 13px;
+	color: #fff;
+	margin: 0;
+	padding: 0.5em 0 0 0;
+}
+
+.header-inner {
+	max-width: 970px;
+}
+
+.head-title {
+	background-color: #008cd7;
+	padding: 0.2em;
+}
+
+.head-logo {
+	padding:20px 0;
+	margin:0;
+}
+
+.head-slider {
+	padding:0;
+	margin:0;
+}
+
+.tyumoku-title {
+	text-align:center;
+	padding: 0;
+	background-color: #008C45;
+}
+
+.osusume-photo {
+	height: 320px;
+	max-width: 320px;
+	text-align:center;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.osusume-spec {
+	height: 270px;
+	color: #000000;
+	background-color:#fff;
+	font-size: 18px;
+	line-height: 1.2em;
+	padding: 30px 30px 20px 30px;
+	display: block;
+}
+
+.osusume-moreinfo {
+	display: block;
+	text-align: center;
+	height: 50px;
+}
+
+.main {
+	max-width:970px;
+}
+
+#main-tower h3 {
+	background-image: url(images/bg_h3_2.png);
+	background-repeat: repeat;
+	padding: 6px 0 2px 10px;
+	margin-top: 0;
+	margin-bottom: 1em;
+	font-weight: bold;
+	color: #000;
+	min-height: 41px;
+	line-height: 1.5em;
+	border-left: 8px solid #74ccf4;
+}
+
+#main-tower article {
+	margin: 0 0 32px 0;
+}
+
+ul.list-inline {
+	padding: 0;
+	margin: 0 0 0 0;
+	font-size: 0;
+}
+
+ul.list-inline li {
+	padding: 0;
+	margin: 0;
+}
+
+/** 新着物件リスト  **/
+#news {
+	margin-bottom: 30px;
+}
+.news-line {
+	font-size: 13px;
+	line-height: 1.4em;
+	border-top: 1px solid #ccc;
+}
+dt.news-date {
+	width: 110px;
+	color: #888;
+	padding: 4px 10px 2px 0px;
+	margin-right: 0px;
+	font-size: 14px;
+}
+dd.news-naiyo {
+	padding: 4px 0px 4px 0px;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 1px solid #CCC;
+}
+
+#sidebar ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#sidebar li {
+  padding-left: 1.5em;
+}
+
+.modal-dialog ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+.modal-dialog li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  width:185px;
+	border-bottom: 1px solid #CCC;
+}
+
+#area ul {
+  padding-left: 0;
+  list-style: none;
+  margin-left: auto;
+}
+
+#area li {
+  width: 138px;
+}
+
+.railway {
+	padding: 6px 0px 4px 5px;
+	background-color: #F1EFEA;
+	color: #7D001A;
+	margin-top:2px;
+	margin-bottom:1px;
+	font-size: 14px;
+	background-image: url(images/bg_arrow-down.png); 
+	background-position: right 5px center;
+	background-repeat: no-repeat;
+}
+.railway:hover {
+	background-color: #E5E0D2;
+}
+.railway.active {
+	background-image: url(images/bg_arrow-up.png); 
+	background-position: right 5px center;
+	background-repeat: no-repeat;
+	font-weight: 700;
+}
+.line {
+	background-color: #eee;
+	padding: 3px 2px 2px 4px;
+	margin-top: 2px;
+	margin-left: 1.0em;
+	background-image: url(images/bg_arrow-down.png); 
+	background-position: right 5px center;
+	background-repeat: no-repeat;
+}
+.line:hover {
+	background-color: #ccc;
+}
+.line.active {
+	background-image: url(images/bg_arrow-up.png); 
+	background-position: right 5px center;
+	background-repeat: no-repeat;
+	font-weight: 700;
+}
+
+.station-select ul {
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+.station-select li {
+  width:180px;
+}
+
+.station-select li:hover {
+	color: #354F8E;
+}
+
+.modal-dialog input[type="radio"],
+.modal-dialog input[type="checkbox"] {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+#FacilitySearch li {
+  width: 280px;
+}
+
+#result {
+	margin-top: 10px;
+}
+
+#result .panel-body {
+	padding: 0 10px;
+}
+
+#result .keitai {
+	max-width: 200px;
+	height: 2em;
+	margin : 0;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.keitai .label {
+	font-size: small;
+}
+
+#result .list-title {
+	height: 2em;
+	font-size: 18px;
+	font-weight: bold;
+	margin : 0;
+}
+
+#result .list-title .label {
+	font-size:60%;
+	vertical-align:middle;
+}
+
+#result .list-photo {
+	max-width: 98px;
+	border: 1px solid #ddd;
+}
+
+
+
+/***************** フッター部 ********************/
+footer {
+	background-color: #d3edfa;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin-top: 2em;
+}
+.footer-inner {
+	width: 970px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.company-name {
+	font-size: 18px;
+	font-weight: bold;
+}
+footer .container {
+	width: auto;
+}
+
+@media screen and (max-width: 480px) {
+.footer-inner {
+	width: 100%;
+}
+}
+
+
+/*************************************************
+　　　　　サイドバーの見た目を整える
+*************************************************/
+#sidebar h3 {
+	margin: 30px 0px 10px 0px; 
+	padding: 6px 0px 6px 0px;
+	border-bottom: 1px dotted #ccc;
+	color: #008Cd7;
+}
+#cftsearch0 {
+	margin-bottom: 2em;
+}
+.users_favorites li:before {
+	content: "≫";
+}
+#cftsearch0 li {
+	list-style: none;
+	margin-left: 1.5em;
+	padding-left: 0;
+	border-bottom: 1px dotted #ccc;
+}
+#cftsearch0 li label {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 0.3em 0 0.3em 0;
+}
+#cftsearch0 label {
+	padding: 0.5em 0 0.5em;
+	width: 100%;
+}
+#cftsearch0 label:hover {
+	background-color: #f3f3f3;
+}
+#cftsearch0 .modal-body li {
+	border-bottom: 1px dotted #ccc;
+	margin-left: 0;
+	padding-left: 1.5em
+}
+#cftsearch0 .modal-body li:hover {
+	background-color: #f3f3f3;
+}
+#cftsearch0 ul.facilities li { /*設備検索モーダル*/
+	
+}
+
+#sidebar input[type="text"], #sidebar input[type="password"] {
+	width: 100%;
+}
+
+#Maisoku input#licence,
+#Maisoku input#address,
+#Maisoku input#address2 {
+	width: 300px;
+}
+
+/****************************************************
+　　　　　　　検索結果リスト
+*****************************************************/
+#result div.row.result-name {
+	padding: 15px 15px 0px 15px;
+}
+#result .row.result-name .col-md-10 {
+	padding-left: 0px;
+}
+#result h4.list-title:before {
+	content: "≫ ";
+	font-weight: 300;
+}
+#result .btn {
+	margin-bottom: 10px;
+}
+
+.list-spec th {
+	font-weight: 300;
+	font-size: 11px;
+}
+.list-spec th.tinryo {
+	width: 102px;
+}
+.list-spec th.syozaiti {
+	width: 180px;
+}
+.list-spec th.menseki {
+	width: 100px;
+}
+#result .list-spec td {
+		vertical-align: baseline;
+}
+.tinryo-kingaku {
+	font-size: 20px;
+	font-weight: bold;
+	color: #008C45;
+}
+table.table.table-bordered.list-spec {
+	margin-bottom: 11px;
+}
+/*マイソクチェック*/
+.result-box label{ 
+	position: relative;
+}
+.result-box label input{ 
+	opacity: 0;
+}
+.result-box label .check{ 
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	background: url("images/print_check01.png") no-repeat 0 0;
+	width: 20px;
+	height: 20px;
+}
+.result-box label input:checked + .check{
+	background-position: 0 -20px;
+}
+
+/****************************************
+　　　　各物件の詳細ページ
+****************************************/
+.entryPostTitle {
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 0;
+	padding: 0.3em;
+	border-top: 2px solid #008C45;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e5e5e5), to(#fff));
+	background: -moz-linear-gradient(#e5e5e5, #fff);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#e5e5e5, EndColorStr=#ffffff)";
+}
+.entryPostTitle .label{
+	padding: 2px 5px 0px 5px;
+	vertical-align: middle;
+}
+.entry-content.post-content h3 {
+	padding: 2px 0px 0px 10px;
+	border-left: 3px solid #008C45;
+	color: #008C45;
+}
+.entry-content.post-content h4 {
+	padding: 2px 0px 2px 0px;
+	border-bottom: 1px dotted #ddd;
+	color: #008C45;
+}
+table.bukken-info {
+	border-bottom: 1px solid #ddd;
+}
+table.table.bukken-info span.setsubi-label {
+	background-color: #5FB52F;
+	padding: 2px 4px;
+	color: #fff;
+	font-size: 13px;
+	margin: 0 0.5em 0.5em 0;
+	display: inline-block;
+	border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+}
+.bukken-info th {
+	width: 8em;
+	background-color:#dff0d8;
+}
+/* 動画の上に空白を追加 */
+/*#details iframe { */
+#movie {
+	margin-top: 1.8em;
+}
+
+.fotorama__stage img.fotorama__img:hover { 
+	cursor: pointer !important;
+}
+
+.carousel-control {
+	top: 15%;
+	bottom: 15%;
+}
+
+#download_form, #booking_form {
+	margin-bottom: 2.5em;
+}
+
+/***　検索結果詳細の右サイドバー ***/
+
+.bukken-photo button {
+	margin: 0.5em 0em 0.5em 0em;
+}
+
+/****************************************
+　　　トップの切り替えボタン位置調整
+****************************************/
+form#change_status {
+	padding-top: 3px;
+}
+#change_status button {
+	position: relative;
+	top: -2px;
+}
+.login-name {
+	padding-top: 3px;
+}
+.login-name button {
+	position: relative;
+	top: -2px;
+}
+
+/****************************************
+　　　申込書ダウンロードのページを修正
+****************************************/
+table.document-download th, table.document-download td {
+	border-bottom: 1px dotted #aaa;
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+table.application-download td {
+	vertical-align: middle !important;
+}
+
+/****************************************
+　　　プロフィール編集
+****************************************/
+#your-profile .form-table {
+	width: 90%;
+}
+
+#your-profile .form-table th {
+	width: 30%;
+}
+
+#your-profile .form-table input {
+	width: 90%;
+}
+
+/****************************************
+　　　ウィジェット調整
+****************************************/
+.sideWidget .textwidget {
+	margin-top: 0.5em;
+}
+
+/****************************************
+　　　Googleマップ
+****************************************/
+.map-embed
+{
+	max-width: 100% ;
+	height: 500px ;
+	margin: 0 ;
+	padding: 0 0 56.25% ;
+	margin-bottom: 10px;
+
+	overflow: hidden ;
+
+	position: relative ;
+	top: 0 ;
+	left: 0 ;
+}
+
+#result > .map-embed
+{
+	height: 200px;
+}
+
+.map-embed > div
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+
+	width: 100% ;
+	height: 100% ;
+
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.map-embed img
+{
+	max-width: none ;
+}
+
+
+@media screen and (max-width: 480px) {
+.map-embed
+{
+	height: 250px ;
+}
+}
+
+/****************************************************
+　　　　　　　設備追加ランディングページ（東内）
+*****************************************************/
+
+table.setsubi-hyo {
+	font-size: 1.3em;
+}
+table.setsubi-hyo th {
+	font-weight: bold;
+}
+table.setsubi-hyo td {
+	color: #BE0000;
+}
+
+/****************************************************
+　　　　　　トップのWeb内見・設備追加バナー
+*****************************************************/
+.top-2bn {
+	margin: 0; /* タブレット・スマホで見たときに綺麗になるように */
+	/* margin-top: 1em; margin-bottom: 1.5em; */
+}
+@media screen and (max-width: 719px) {
+.top-2bn {
+	text-align: center;
+}
+}
+
+@media screen and (max-width: 480px) {
+.top-2bn img {
+	width: 100%;
+	max-width: 100%;
+}
+}
+/* (野中) キャンペーン物件の文字を少し強調 */
+.panel-danger {
+	font-weight: bold;
+}
+
+/****************************************************
+　　　　　　扉画像をスマホでも
+*****************************************************/
+#main-tower p img {
+	max-width: 100%;
+}
+/****************************************************
+　　　　　　ブログ用の告知フキダシ
+*****************************************************/
+p.blog-update {
+	position: relative;
+	display: inline-block;
+	padding: 0 15px;
+	width: auto;
+	min-width: 115px;
+	height: 50px;
+	color: #F6F6F6;
+	line-height: 50px;
+	text-align: center;
+	background: #008CD7;
+	border-radius: 60%;
+}
+p.blog-update:before {
+	content: "";
+	position: absolute;
+	bottom: -10px; left: 20px;
+	margin-left: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #008CD7;
+	border-radius: 0 30px 0 30px;
+	z-index: -1;
+}
+p.blog-update:after {
+	content: "";
+	position: absolute;
+	bottom: -5px; left: 30px;
+	margin-left: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #FFF;
+	border-radius: 0 30px 0 30px;
+	z-index: -1;
+	-webkit-transform: rotate(30deg);
+	   -moz-transform: rotate(30deg);
+	    -ms-transform: rotate(30deg);
+	     -o-transform: rotate(30deg);
+	        transform: rotate(30deg);
+}
+
+/******* リザルト画面の上部再検索枠 *******/
+.search-condition {
+	margin: 10px 10px 10px 10px;
+}
+.search-condition ul li {
+	margin-bottom: -1px;
+	border: 1px solid #777;
+}
+.search-condition ul li:first-child {
+		-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+.search-condition ul li:last-child {
+		-webkit-border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 6px 6px;
+}
+.search-condition ul li a {
+	display: block;
+	padding: 10px 8px 10px 38px;
+	font-size: 13px;
+	line-height: 1.35em;
+	color: #333333;
+}
+.search-elements p:first-child {
+	float: left;
+	width: calc(100% - 3.8em);
+}
+.search-elements p:last-child {
+	float: right;
+	width: 3.75em;
+	color: #008cd6;
+	font-weight: 700;
+}
+.search-area {
+	background-image: url(images/icon_map_g.png);	
+	background-position: left 6px center;
+	background-repeat: no-repeat;
+}
+.search-statioon {
+	background-image: url(images/icon_station_g.png);	
+	background-position: left 8px center;
+	background-repeat: no-repeat;
+}
+.search-check {
+	background-image: url(images/icon_check_g.png);	
+	background-position: left 8px center;
+	background-repeat: no-repeat;
+}
+.sort {
+	text-align: center;
+}
+
+/* 各物件の詳細ウィンドウで、タブボタンを単体ボタン調に （東内）*/
+.post-content .nav-tabs {
+	border-bottom: none;
+	margin-bottom: 8px;
+}
+
+.post-content .nav-tabs li a {
+	border: 1px solid #ddd;
+	border-radius: 4px 4px 4px 4px;
+}
+
+/* PCモードでの表示崩れに対応 */
+@media screen and (max-width: 480px) {
+#main-tower article img, #sidebar img {
+	max-width: 100%;
+}
+#main-tower article h3 div.col-xs-10 {
+	width: 70%
+}
+} /* ←レスポンシブ用 */
+
+.panel-danger {
+    font-weight: bold;
+}
+.panel-danger {
+    border-color: #ebccd1 !important;
+}
+.panel-default {
+    border-color: #ddd !important;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+.panel-danger>.panel-heading {
+    color: #a94442 !important;
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5 ;
+    border-color: #ddd ;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#result .panel-body {
+    padding: 0 10px;
+}
+
+.panel-body {
+    padding: 15px;
+}
+.keitai .label {
+    font-size: small;
+}
+
+.label-warning {
+    background-color: #f0ad4e;
+}
+
+.label-success {
+    background-color: #5cb85c;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+#result .list-title {
+    height: 2em;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#result .list-photo {
+    max-width: 98px;
+    border: 1px solid #ddd;
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
