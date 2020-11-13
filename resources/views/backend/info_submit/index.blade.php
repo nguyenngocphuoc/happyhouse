@@ -10,11 +10,7 @@
 
 <section class="content-header">
     <h1>
-        Danh sách các ứng viên
-        <small>
-            <a href="{{ route('admin.info-submit.create') }}" class="btn btn-block btn-xs btn-success btn-flat"><i
-                    class="fa fa-plus"></i> Tạo mới</a>
-        </small>
+        Danh sách liên hệ
     </h1>
 </section>
 

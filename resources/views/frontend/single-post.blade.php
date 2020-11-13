@@ -113,6 +113,7 @@
     .owl-item img {
         width: 100%;
         height: 100%;
+        max-height: 800px;
         object-fit: cover;
         cursor: pointer;
     }
@@ -158,6 +159,11 @@
     .row .col-md-9,
     .row .col-md-3 {
         padding-right: 0px !important;
+    }
+
+    .owl-carousel .owl-stage {
+        display: flex;
+        align-items: center;
     }
 </style>
 @endsection
@@ -210,14 +216,39 @@ config('properties.text.slogan'),
                                 @endforeach
                             </select>
                         </div>
-                        <h3>{{config('properties.text.price_range')}} ({{config('properties.text.yen')}})</h3>
-                        <div class="form-group range-wrap">
-                            <input type="text" id="range" value="" name="price" />
+                        <h3>{{config('properties.text.price_range')}}</h3>
+                        <div class="form-group">
+                            <select name="price" class="app-select form-control" required>
+                                <option
+                                    value="{{ config('properties.priceRange.min') . ';' . config('properties.priceRange.max') }}"
+                                    data-display="{{config('properties.text.price_range')}}">
+                                    {{config('properties.text.price_range')}}
+                                </option>
+                                @foreach(config('properties.priceDropdown') as $key => $price)
+                                <option value="{{ $price }}" @if($price==app('request')->input('price'))
+                                    {{'selected'}}
+                                    @endif)>
+                                    {{ $key }}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
-
                         <h3>{{config('properties.text.area_range')}}</h3>
-                        <div class="form-group range-wrap">
-                            <input type="text" id="range2" value="" name="acreage" />
+                        <div class="form-group">
+                            <select name="acreage" class="app-select form-control" required>
+                                <option
+                                    value="{{ config('properties.acreageRange.min') . ';' . config('properties.acreageRange.max') }}"
+                                    data-display="{{config('properties.text.area_range')}}">
+                                    {{config('properties.text.area_range')}}
+                                </option>
+                                @foreach(config('properties.acreageDropdown') as $key => $acreage)
+                                <option value="{{ $acreage }}" @if($acreage==app('request')->input('acreage'))
+                                    {{'selected'}}
+                                    @endif)>
+                                    {{ $key }}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
                         <br>
                         <div class="form-group">

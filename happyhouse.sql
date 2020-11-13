@@ -567,8 +567,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role_id`, `photo`, `status`, `remember_token`, `description`, `position`, `facebook`, `twitter`, `instagram`, `created_at`, `updated_at`) VALUES
 (1, 'ルアン・ユフ', 'phuocnguyenngoc1997@gmail.com', NULL, '$2y$10$RtVmSU6Bot9emNoca.eUxuMUDVf4PwOEgxJnDeywo0aMATFn5gA.u', 1, 'photo-16034403305f928eca8a420.jpg', 1, '51n52mv4FdBCZCj7puFwzV6qfoNrl5SMl2ZsWN01x35IncHc6urOcK2ZJeFa', 'Con nguyện hóa làm cây cầu đá, chịu kiếp 500 năm gió thốc, 500 năm nắng đổ , 500 năm mưa sa, chỉ nguyện người con gái đó, đi qua cây cầu.', 'スタッフ', 'https://www.facebook.com/profile.php?id=100005694852711', 'https://www.facebook.com/profile.php?id=100005694852711', 'sda', '2020-07-17 22:27:53', '2020-10-23 10:05:30'),
-(4, 'ヤン・ミンシュン', 'thuandm1@fsoft.com.vn', NULL, '$2y$10$JEEHbwn4f14M3ZW1N5vyTefZhuxdsyDhjZA5UlxCWWsRa3nalJEJa', 1, 'user-16029988335f8bd23154c35.jpg', 1, NULL, '\"When you cut against the grain of the wood, much strength is needed. When you program against the grain of the problem, much code is needed\" - Master Yuan-Ma', 'スタッフ', '', '', '', '2020-08-13 02:24:44', '2020-10-18 05:27:13'),
-(5, 'ルアン・ドゥイフェン', 'PhongND@fsoft.com.vn', NULL, '$2y$10$.wezAYLvGWV/yQD5ZjbEneJB.dGFOkOszaYteGHmDUJsfXVfXVeHm', 1, 'user-16029988575f8bd2494cf59.jpg', 1, NULL, 'mô tả', 'スタッフ', '', '', '', '2020-08-16 21:01:53', '2020-10-18 05:27:37');
+(4, 'ヤン・ミンシュン', 'thuandm1@KhongPhaiFsoftOk.com.ja', NULL, '$2y$10$JEEHbwn4f14M3ZW1N5vyTefZhuxdsyDhjZA5UlxCWWsRa3nalJEJa', 1, 'user-16029988335f8bd23154c35.jpg', 1, NULL, '\"When you cut against the grain of the wood, much strength is needed. When you program against the grain of the problem, much code is needed\" - Master Yuan-Ma', 'スタッフ', '', '', '', '2020-08-13 02:24:44', '2020-10-18 05:27:13'),
+(5, 'ルアン・ドゥイフェン', 'PhongND@KhongPhaiFsoftOk.com.ja', NULL, '$2y$10$.wezAYLvGWV/yQD5ZjbEneJB.dGFOkOszaYteGHmDUJsfXVfXVeHm', 1, 'user-16029988575f8bd2494cf59.jpg', 1, NULL, 'mô tả', 'スタッフ', '', '', '', '2020-08-16 21:01:53', '2020-10-18 05:27:37');
 
 --
 -- Chỉ mục cho các bảng đã đổ
