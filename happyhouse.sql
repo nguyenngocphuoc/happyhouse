@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 10, 2020 lúc 09:27 AM
+-- Thời gian đã tạo: Th10 16, 2020 lúc 01:52 PM
 -- Phiên bản máy phục vụ: 10.4.10-MariaDB
 -- Phiên bản PHP: 7.3.12
 
@@ -70,7 +70,11 @@ INSERT INTO `attributes` (`id`, `news_id`, `name`, `value`, `created_at`, `updat
 (15, 6, '築年月', '1992 年　3 月', '2020-10-19 09:26:02', '2020-10-19 09:26:02'),
 (16, 7, '共益費', '3,000 円', '2020-10-22 18:49:08', '2020-10-22 18:50:07'),
 (17, 7, '敷金・礼金', '0ヶ月・0ヶ月 ※ペット飼育時礼金1ヶ月分追加となります。', '2020-10-22 19:03:04', '2020-10-22 19:03:04'),
-(18, 7, 'その他諸費用', '退去時清掃費　10,000円', '2020-10-22 19:24:15', '2020-10-22 19:24:15');
+(18, 7, 'その他諸費用', '退去時清掃費　10,000円', '2020-10-22 19:24:15', '2020-10-22 19:24:15'),
+(20, 8, 'cô ơi cô cô đừng đi lấy chống', 'sad', '2020-11-10 11:58:29', '2020-11-10 11:58:29'),
+(21, 8, 'mdjhdgas', 'ádasd', '2020-11-10 13:03:21', '2020-11-10 13:03:21'),
+(22, 8, 'jhsagdhjjas', 'as', '2020-11-10 14:32:22', '2020-11-10 14:32:22'),
+(23, 9, 'xe lửa', '5 km', '2020-11-10 14:47:18', '2020-11-10 14:47:21');
 
 -- --------------------------------------------------------
 
@@ -219,7 +223,23 @@ INSERT INTO `gallery` (`id`, `news_id`, `path`, `size`, `created_at`, `updated_a
 (83, 7, 'news-img-16033853195f91b7e7ce051.jp2', 73592, '2020-10-22 18:48:39', '2020-10-22 18:50:07'),
 (84, 7, 'news-img-16033853195f91b7e7f1094.jp2', 32869, '2020-10-22 18:48:39', '2020-10-22 18:50:07'),
 (85, 7, 'news-img-16033853205f91b7e82493f.jp2', 110508, '2020-10-22 18:48:40', '2020-10-22 18:50:07'),
-(86, 7, 'news-img-16033853205f91b7e84bf03.jp2', 21724, '2020-10-22 18:48:40', '2020-10-22 18:50:07');
+(86, 7, 'news-img-16033853205f91b7e84bf03.jp2', 21724, '2020-10-22 18:48:40', '2020-10-22 18:50:07'),
+(87, 8, 'news-img-16050000295faa5b5d1f162.jp2', 54083, '2020-11-10 11:20:29', '2020-11-10 11:20:39'),
+(88, 8, 'news-img-16050000295faa5b5d48d2b.jp2', 32670, '2020-11-10 11:20:29', '2020-11-10 11:20:39'),
+(89, 8, 'news-img-16050000295faa5b5d71fb8.jp2', 44029, '2020-11-10 11:20:29', '2020-11-10 11:20:39'),
+(90, 8, 'news-img-16050000295faa5b5dc30bf.jp2', 40428, '2020-11-10 11:20:29', '2020-11-10 11:20:39'),
+(91, 8, 'news-img-16050000295faa5b5df1791.jp2', 51872, '2020-11-10 11:20:29', '2020-11-10 11:20:39'),
+(92, 8, 'news-img-16050000305faa5b5e45193.jp2', 21870, '2020-11-10 11:20:30', '2020-11-10 11:20:39'),
+(93, 8, 'news-img-16050000305faa5b5e7322f.jp2', 28012, '2020-11-10 11:20:30', '2020-11-10 11:20:39'),
+(94, 8, 'news-img-16050000305faa5b5ebb307.jp2', 31067, '2020-11-10 11:20:30', '2020-11-10 11:20:39'),
+(95, 9, 'news-img-16050124105faa8bba1230f.jp2', 54083, '2020-11-10 14:46:50', '2020-11-10 14:47:21'),
+(96, 9, 'news-img-16050124105faa8bba6e25c.jp2', 32670, '2020-11-10 14:46:50', '2020-11-10 14:47:21'),
+(97, 9, 'news-img-16050124105faa8bbac7f40.jp2', 44029, '2020-11-10 14:46:50', '2020-11-10 14:47:21'),
+(98, 9, 'news-img-16050124115faa8bbb32c61.jp2', 40428, '2020-11-10 14:46:51', '2020-11-10 14:47:21'),
+(99, 9, 'news-img-16050124115faa8bbb83dba.jp2', 51872, '2020-11-10 14:46:51', '2020-11-10 14:47:21'),
+(100, 9, 'news-img-16050124115faa8bbbe4a92.jp2', 21870, '2020-11-10 14:46:51', '2020-11-10 14:47:21'),
+(101, 9, 'news-img-16050124125faa8bbc9e56f.jp2', 28012, '2020-11-10 14:46:52', '2020-11-10 14:47:21'),
+(102, 9, 'news-img-16050124125faa8bbcefd8f.jp2', 31067, '2020-11-10 14:46:52', '2020-11-10 14:47:21');
 
 -- --------------------------------------------------------
 
@@ -291,7 +311,10 @@ INSERT INTO `info_submits` (`id`, `name`, `email`, `message`, `phone`, `status`,
 (4, 'sd', 'thorbmt@gmail.com', 'asd', '111379373', 1, '7', '2020-10-29 14:21:00', 1, NULL, 'HGFKFHJFJMJK', 'done', '2020-10-19 10:30:15', '2020-10-23 20:06:37'),
 (5, 'sd', 'thorbmt@gmail.com', 'sadsd', '111379373', 1, NULL, '2020-12-23 09:30:00', 0, NULL, '5f932c9da2331', 'pending', '2020-10-23 21:18:53', '2020-10-24 03:59:08'),
 (6, 'sd', 'thorbmt@gmail.com', 'dfsdfds', '111379373', 1, '6', '2020-12-21 21:35:00', 1, NULL, '5f938a4e8855c', 'inprogress', '2020-10-24 03:58:38', '2020-10-24 04:00:00'),
-(7, 'sd', 'thorbmt@gmail.com', 'haha', '111379373', 1, '6', '2020-10-26 09:30:00', 0, NULL, '5f938d6d2cb77', 'pending', '2020-10-24 04:11:57', '2020-10-28 10:12:33');
+(7, 'sd', 'thorbmt@gmail.com', 'haha', '111379373', 1, '6', '2020-10-26 09:30:00', 0, NULL, '5f938d6d2cb77', 'pending', '2020-10-24 04:11:57', '2020-10-28 10:12:33'),
+(8, 'sd', 'thorbmt@gmail.com', 'ádasd', '111379373', 1, '8', '2020-11-12 07:30:00', 0, NULL, '5faa714505353', 'inprogress', '2020-11-10 12:53:57', '2020-11-10 13:00:31'),
+(9, 'sd', 'thorbmt@gmail.com', 'đâsd', '111379373', 1, '8', '2020-11-12 07:30:00', 0, NULL, '5faa71a24275b', 'inprogress', '2020-11-10 12:55:30', '2020-11-10 13:00:31'),
+(10, 'jhsagdhjjas', 'phuocnguyenngoc1997@gmail.com', 'sdasdas', 'asdas', 1, '7', '2020-11-12 22:42:00', 0, NULL, '5faa8a20b856c', 'inprogress', '2020-11-10 14:40:00', '2020-11-10 15:01:15');
 
 -- --------------------------------------------------------
 
@@ -391,6 +414,11 @@ CREATE TABLE `news` (
   `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `coords` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bus_station_distance` int(11) DEFAULT NULL,
+  `free_first_months` int(11) NOT NULL DEFAULT 0,
+  `is_foreign_nationality_consultation` tinyint(1) NOT NULL DEFAULT 1,
+  `is_newly_built_properties` tinyint(1) NOT NULL DEFAULT 0,
+  `receiving_time` date NOT NULL DEFAULT current_timestamp(),
   `details` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` int(11) NOT NULL,
   `district_id` int(10) UNSIGNED NOT NULL,
@@ -416,9 +444,11 @@ CREATE TABLE `news` (
 -- Đang đổ dữ liệu cho bảng `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `slug`, `address`, `coords`, `image`, `details`, `category_id`, `district_id`, `statuses_id`, `status`, `price`, `acreage`, `floor_amount`, `room_amount`, `bathroom_amount`, `bed_amount`, `host_name`, `phone_number`, `note`, `user_id`, `view_count`, `tags`, `created_at`, `updated_at`) VALUES
-(6, 'ファミリーでもフレンドでも', 'famiri-demo-furendo-demo', '〒　170-0005 東京都豊島区南大塚3-52-5近藤ビル2F', '13.1965807,108.2225727', 'news-16028712295f89dfbd53ad9.jp2', '<p>ご家族で住むお部屋としても、ご友人たちとのルームシェアとしても暮らしやすい、3DKタイプのお部屋です。<br />\r\n6帖と7帖の洋室にはそれぞれ1帖ほどの収納スペースがあります。<br />\r\n南向きのバルコニーに面している7帖の洋室と6帖の和室には、窓から日当たりがよく、お部屋全体を明るくさせ、心地よい空間を作っています。<br />\r\n<br />\r\nガスコンロが設置できるキッチンは、かなり広々としており、シンクやワークトップもしっかりあるので、お料理が好きな方にもおすすめいたします。<br />\r\n収納トレイ付洗面化粧台もあるので、日ごろの身だしなみを整えるのに最適です。<br />\r\n<br />\r\n気になる方はぜひお問合せください。<br />\r\n<br />\r\n○　敷金なし・礼金なし<br />\r\n○　ペット飼育OK<br />\r\n大事な家族の一員であるワンちゃんやネコちゃんももちろん一緒に暮らしていただけます。<br />\r\n&nbsp;</p>', 3, 5, 3, 1, 50035, 70, 2, 8, 3, 1, 'Nguyễn Ngọc Phước', '0947467073', NULL, 1, 18, '東京,無料のwifi,無料の電気', '2020-10-15 18:17:05', '2020-11-10 08:27:04'),
-(7, 'きゅっとまとめてより広く', 'kyutto-matomete-yori-hiroku', '青森県青森市幸畑2丁目', '13.1965807,108.2225727', 'news-16033854075f91b83fbe7b2.jp2', '<p>▼▲▼　11/13までにご入居いただける方限定　初期費用ゼロ円キャンペーン実施中　▼▲▼<br />\r\n<br />\r\nしっかりとした設備もまとまっている事で、より広くお部屋が使えます。<br />\r\nガスコンロ設置可タイプのキッチンの横に洗濯機置場があり、お風呂は３点ユニットのためコンパクトでお掃除もしやすいです。<br />\r\n上下二段に分かれている収納スペースは、用途によって使い分けができるのでとても便利です。<br />\r\n<br />\r\n○　敷金なし・礼金なし<br />\r\n○　ペット飼育OK<br />\r\n大事な家族の一員であるワンちゃんやネコちゃんももちろん一緒に暮らしていただけます。</p>', 3, 5, 3, 1, 40000, 70, 2, 4, 2, 3, 'Nguyễn Ngọc Phước', '0947467073', NULL, 1, 4, 'laravel,framework', '2020-10-22 18:50:07', '2020-11-10 07:46:39');
+INSERT INTO `news` (`id`, `title`, `slug`, `address`, `coords`, `image`, `bus_station_distance`, `free_first_months`, `is_foreign_nationality_consultation`, `is_newly_built_properties`, `receiving_time`, `details`, `category_id`, `district_id`, `statuses_id`, `status`, `price`, `acreage`, `floor_amount`, `room_amount`, `bathroom_amount`, `bed_amount`, `host_name`, `phone_number`, `note`, `user_id`, `view_count`, `tags`, `created_at`, `updated_at`) VALUES
+(6, 'ファミリーでもフレンドでも', 'famiri-demo-furendo-demo', '〒　170-0005 東京都豊島区南大塚3-52-5近藤ビル2F', '13.1965807,108.2225727', 'news-16028712295f89dfbd53ad9.jp2', 5, 2, 0, 0, '2020-11-19', '<p>ご家族で住むお部屋としても、ご友人たちとのルームシェアとしても暮らしやすい、3DKタイプのお部屋です。<br />\r\n6帖と7帖の洋室にはそれぞれ1帖ほどの収納スペースがあります。<br />\r\n南向きのバルコニーに面している7帖の洋室と6帖の和室には、窓から日当たりがよく、お部屋全体を明るくさせ、心地よい空間を作っています。<br />\r\n<br />\r\nガスコンロが設置できるキッチンは、かなり広々としており、シンクやワークトップもしっかりあるので、お料理が好きな方にもおすすめいたします。<br />\r\n収納トレイ付洗面化粧台もあるので、日ごろの身だしなみを整えるのに最適です。<br />\r\n<br />\r\n気になる方はぜひお問合せください。<br />\r\n<br />\r\n○　敷金なし・礼金なし<br />\r\n○　ペット飼育OK<br />\r\n大事な家族の一員であるワンちゃんやネコちゃんももちろん一緒に暮らしていただけます。<br />\r\n&nbsp;</p>', 3, 5, 3, 1, 50035, 70, 2, 8, 3, 1, 'Nguyễn Ngọc Phước', '0947467073', NULL, 1, 18, '東京,無料のwifi,無料の電気', '2020-10-15 18:17:05', '2020-11-16 06:25:57'),
+(7, 'きゅっとまとめてより広く', 'kyutto-matomete-yori-hiroku', '青森県青森市幸畑2丁目', '13.1965807,108.2225727', 'news-16033854075f91b83fbe7b2.jp2', NULL, 2, 1, 0, '2020-11-16', '<p>▼▲▼　11/13までにご入居いただける方限定　初期費用ゼロ円キャンペーン実施中　▼▲▼<br />\r\n<br />\r\nしっかりとした設備もまとまっている事で、より広くお部屋が使えます。<br />\r\nガスコンロ設置可タイプのキッチンの横に洗濯機置場があり、お風呂は３点ユニットのためコンパクトでお掃除もしやすいです。<br />\r\n上下二段に分かれている収納スペースは、用途によって使い分けができるのでとても便利です。<br />\r\n<br />\r\n○　敷金なし・礼金なし<br />\r\n○　ペット飼育OK<br />\r\n大事な家族の一員であるワンちゃんやネコちゃんももちろん一緒に暮らしていただけます。</p>', 3, 5, 3, 1, 40000, 70, 2, 4, 2, 3, 'Nguyễn Ngọc Phước', '0947467073', NULL, 1, 5, 'laravel,framework', '2020-10-22 18:50:07', '2020-11-10 14:39:14'),
+(8, 'thử crop cái coi sao', 'thu-cai-coi-sao', '64 Ngô Sĩ Liên Đà Nẵng', '13.1965807,108.2225727', 'news-16050000395faa5b67a8510.jp2', NULL, 2, 1, 0, '2020-11-16', '<p>asdasdasdasdas</p>', 4, 7, 3, 1, 90000, 32, 1, 11, 13, 12, 'Nguyễn Ngọc Phước', '111379373', NULL, 1, 2, NULL, '2020-11-10 11:20:39', '2020-11-10 14:31:41'),
+(9, 'tiêu đề', 'kyutto-matomete-yori-hiroku-abc', '142 thôn 16', '13,108', 'news-16050124415faa8bd904c12.jp2', 7, 2, 0, 0, '2020-11-16', '<p><strong>abc</strong></p>', 4, 7, 3, 1, 123123, 50, 1, 1, 13, 1, 'phước', '0947467073', NULL, 1, 1, 'free-wifi,abc', '2020-11-10 14:47:21', '2020-11-16 06:34:41');
 
 -- --------------------------------------------------------
 
@@ -567,8 +597,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role_id`, `photo`, `status`, `remember_token`, `description`, `position`, `facebook`, `twitter`, `instagram`, `created_at`, `updated_at`) VALUES
 (1, 'ルアン・ユフ', 'phuocnguyenngoc1997@gmail.com', NULL, '$2y$10$RtVmSU6Bot9emNoca.eUxuMUDVf4PwOEgxJnDeywo0aMATFn5gA.u', 1, 'photo-16034403305f928eca8a420.jpg', 1, '51n52mv4FdBCZCj7puFwzV6qfoNrl5SMl2ZsWN01x35IncHc6urOcK2ZJeFa', 'Con nguyện hóa làm cây cầu đá, chịu kiếp 500 năm gió thốc, 500 năm nắng đổ , 500 năm mưa sa, chỉ nguyện người con gái đó, đi qua cây cầu.', 'スタッフ', 'https://www.facebook.com/profile.php?id=100005694852711', 'https://www.facebook.com/profile.php?id=100005694852711', 'sda', '2020-07-17 22:27:53', '2020-10-23 10:05:30'),
-(4, 'ヤン・ミンシュン', 'thuandm1@KhongPhaiFsoftOk.com.ja', NULL, '$2y$10$JEEHbwn4f14M3ZW1N5vyTefZhuxdsyDhjZA5UlxCWWsRa3nalJEJa', 1, 'user-16029988335f8bd23154c35.jpg', 1, NULL, '\"When you cut against the grain of the wood, much strength is needed. When you program against the grain of the problem, much code is needed\" - Master Yuan-Ma', 'スタッフ', '', '', '', '2020-08-13 02:24:44', '2020-10-18 05:27:13'),
-(5, 'ルアン・ドゥイフェン', 'PhongND@KhongPhaiFsoftOk.com.ja', NULL, '$2y$10$.wezAYLvGWV/yQD5ZjbEneJB.dGFOkOszaYteGHmDUJsfXVfXVeHm', 1, 'user-16029988575f8bd2494cf59.jpg', 1, NULL, 'mô tả', 'スタッフ', '', '', '', '2020-08-16 21:01:53', '2020-10-18 05:27:37');
+(4, 'ヤン・ミンシュン', 'thuandm1@deophaiepsopdau.com', NULL, '$2y$10$JEEHbwn4f14M3ZW1N5vyTefZhuxdsyDhjZA5UlxCWWsRa3nalJEJa', 1, 'user-16029988335f8bd23154c35.jpg', 0, NULL, '\"When you cut against the grain of the wood, much strength is needed. When you program against the grain of the problem, much code is needed\" - Master Yuan-Ma', 'スタッフ', '', '', '', '2020-08-13 02:24:44', '2020-11-16 14:52:09'),
+(5, 'ルアン・ドゥイフェン', 'PhongND@deophaiepsopdau.com.vn', NULL, '$2y$10$.wezAYLvGWV/yQD5ZjbEneJB.dGFOkOszaYteGHmDUJsfXVfXVeHm', 1, 'user-16029988575f8bd2494cf59.jpg', 0, NULL, 'mô tả', 'スタッフ', '', '', '', '2020-08-16 21:01:53', '2020-11-16 14:51:49');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -710,7 +740,7 @@ ALTER TABLE `advertisements`
 -- AUTO_INCREMENT cho bảng `attributes`
 --
 ALTER TABLE `attributes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
@@ -740,7 +770,7 @@ ALTER TABLE `download_file`
 -- AUTO_INCREMENT cho bảng `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT cho bảng `group_categories`
@@ -758,7 +788,7 @@ ALTER TABLE `hero_images`
 -- AUTO_INCREMENT cho bảng `info_submits`
 --
 ALTER TABLE `info_submits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `map`
@@ -782,7 +812,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `roles`
