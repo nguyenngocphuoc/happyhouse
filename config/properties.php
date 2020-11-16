@@ -19,7 +19,7 @@ return  [
         ],
         'priceRange' => [
             'min' => 200,
-            'max' => 100000
+            'max' => 1000000000
         ],
         'priceDropdown' => [
             '200-1.000 円' => '200;1000',
@@ -31,7 +31,7 @@ return  [
         ],
         'acreageRange'=> [
             'min' => 0,
-            'max' => 500
+            'max' => 50000
         ],
         'acreageDropdown' => [
             '0-100' => '0;100',
@@ -114,6 +114,15 @@ return  [
             'map'=>'地図',
             'created_at'=> '作成日',
             'description'=> '説明',
-            'writer' => '作家'
+            'writer' => '作家',
+            'is_foreign_nationality_consultation'=> "外国籍相談可",
+            'is_newly_built_properties'=> "新築物件",
+            'free_first_months'=>'フリーレント',
+            'greater_than_x_month'=>'ヶ月以上',
+            'bus_station_distance'=> '駅徒歩',
+            'lower_than_x_meter'=>'メートルより低い',
+            'receiving_time'=>'入居可能時期',
+            'lower_than_x_weeks'=>'週間未満',
+            'all'=> 'すべて'
         ]
 ];

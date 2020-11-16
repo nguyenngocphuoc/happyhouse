@@ -112,9 +112,125 @@ config('properties.text.slogan'),
 								src="{{url("file/".$download_file->image)}}" alt="{{$download_file->title}}"></a></p>
 					@endforeach
 					<form method="get" action="{{route('page.property')}}">
+						<div class="form-group">
+							<ul class="unordered-list">
+								<li>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>{{config('properties.text.is_foreign_nationality_consultation')}}</p>
+										<div class="primary-switch">
+											<input type="checkbox" id="primary-switch"
+												name="is_foreign_nationality_consultation"
+												@if(app('request')->input('is_foreign_nationality_consultation') ==
+											'on') checked
+											@endif>
+											<label for="primary-switch"></label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>{{config('properties.text.is_newly_built_properties')}}</p>
+										<div class="confirm-switch">
+											<input type="checkbox" id="confirm-switch" name="is_newly_built_properties"
+												@if(app('request')->input('is_newly_built_properties') ==
+											'on') checked
+											@endif>
+											<label for="confirm-switch"></label>
+										</div>
+									</div>
+								</li>
+								<li>{{config('properties.text.free_first_months')}}:
+									<ul>
+										<input type="radio" id="free_first_months_none" name="free_first_months"
+											value="none" @if(app('request')->input('free_first_months') ==
+										'none') checked
+										@endif>
+										<label for="free_first_months_none">
+											{{config('properties.text.all')}}</label><br>
+										<input type="radio" id="free_first_months_1" name="free_first_months" value="1"
+											@if(app('request')->input('free_first_months') ==
+										'1') checked
+										@endif>
+										<label for="free_first_months_1">1
+											{{config('properties.text.greater_than_x_month')}}</label><br>
+										<input type="radio" id="free_first_months_2" name="free_first_months" value="2"
+											@if(app('request')->input('free_first_months') ==
+										'2') checked
+										@endif>
+										<label for="free_first_months_2">2
+											{{config('properties.text.greater_than_x_month')}}</label><br>
+										<input type="radio" id="free_first_months_3" name="free_first_months" value="3"
+											@if(app('request')->input('free_first_months') ==
+										'3') checked
+										@endif>
+										<label for="free_first_months_3">3
+											{{config('properties.text.greater_than_x_month')}}</label>
+									</ul>
+								</li>
+								<li>{{config('properties.text.bus_station_distance')}}:
+									<ul>
+										<input type="radio" id="bus_station_distance_none" name="bus_station_distance"
+											value="none" @if(app('request')->input('bus_station_distance') ==
+										'none') checked
+										@endif>
+										<label for="bus_station_distance_none">
+											{{config('properties.text.all')}}</label><br>
+										<input type="radio" id="bus_station_distance_1" name="bus_station_distance"
+											value="500" @if(app('request')->input('bus_station_distance') ==
+										'500') checked
+										@endif>
+										<label for="bus_station_distance_1">500
+											{{config('properties.text.lower_than_x_meter')}}</label><br>
+										<input type="radio" id="bus_station_distance_2" name="bus_station_distance"
+											value="1000" @if(app('request')->input('bus_station_distance') ==
+										'1000') checked
+										@endif>
+										<label for="bus_station_distance_2">1000
+											{{config('properties.text.lower_than_x_meter')}}</label><br>
+										<input type="radio" id="bus_station_distance_3" name="bus_station_distance"
+											value="1500" @if(app('request')->input('bus_station_distance') ==
+										'1500') checked
+										@endif>
+										<label for="bus_station_distance_3">1500
+											{{config('properties.text.lower_than_x_meter')}}</label>
+									</ul>
+								</li>
+								<li>{{config('properties.text.receiving_time')}}:
+									<ul>
+										<input type="radio" id="receiving_time_none" name="receiving_time" value="none"
+											@if(app('request')->input('receiving_time') ==
+										'none') checked
+										@endif>
+										<label for="receiving_time_none">
+											{{config('properties.text.all')}}</label><br>
+										<input type="radio" id="receiving_time_1" name="receiving_time"
+											value="{{date("Y-m-d", strtotime("+1 week"))}}"
+											@if(app('request')->input('receiving_time') ==
+										'{{date("Y-m-d", strtotime("+1 week"))}}') checked
+										@endif>
+										<label for="receiving_time_1">1
+											{{config('properties.text.lower_than_x_weeks')}}</label><br>
+										<input type="radio" id="receiving_time_2" name="receiving_time"
+											value="{{date("Y-m-d", strtotime("+2 week"))}}"
+											@if(app('request')->input('receiving_time') ==
+										'{{date("Y-m-d", strtotime("+2 week"))}}') checked
+										@endif>
+										<label for="receiving_time_2">2
+											{{config('properties.text.lower_than_x_weeks')}}</label><br>
+										<input type="radio" id="receiving_time_3" name="receiving_time"
+											value="{{date("Y-m-d", strtotime("+3 week"))}}"
+											@if(app('request')->input('receiving_time') ==
+										'{{date("Y-m-d", strtotime("+3 week"))}}') checked
+										@endif>
+										<label for="receiving_time_3">3
+											{{config('properties.text.lower_than_x_weeks')}}</label>
+									</ul>
+								</li>
+							</ul>
+						</div>
 						<h3>{{config('properties.text.district')}}</h3>
 						<div class="form-group">
-							<select name="district" class="app-select form-control" required>
+							<select name="district" class="form-control default-select" id="default-select" required>
 								<option data-display="{{config('properties.text.district')}}">
 									{{config('properties.text.district')}}</option>
 								@foreach($districts as $district)
@@ -130,7 +246,7 @@ config('properties.text.slogan'),
 						<br>
 						<h3>{{config('properties.text.type')}}</h3>
 						<div class="form-group">
-							<select name="category" class="app-select form-control" required>
+							<select name="category" class="form-control default-select" id="default-select" required>
 								<option data-display="{{config('properties.text.type')}}">
 									{{config('properties.text.type')}}
 								</option>
@@ -147,7 +263,7 @@ config('properties.text.slogan'),
 						<br>
 						<h3>{{config('properties.text.price_range')}}</h3>
 						<div class="form-group">
-							<select name="price" class="app-select form-control" required>
+							<select name="price" class="form-control default-select" id="default-select" required>
 								<option
 									value="{{ config('properties.priceRange.min') . ';' . config('properties.priceRange.max') }}"
 									data-display="{{config('properties.text.price_range')}}">
@@ -165,7 +281,7 @@ config('properties.text.slogan'),
 						<br>
 						<h3>{{config('properties.text.area_range')}}</h3>
 						<div class="form-group">
-							<select name="acreage" class="app-select form-control" required>
+							<select name="acreage" class="form-control default-select" id="default-select" required>
 								<option
 									value="{{ config('properties.acreageRange.min') . ';' . config('properties.acreageRange.max') }}"
 									data-display="{{config('properties.text.area_range')}}">
@@ -180,6 +296,7 @@ config('properties.text.slogan'),
 								@endforeach
 							</select>
 						</div>
+
 						<div class="form-group">
 							<button class="btn btn-danger form-control"
 								type="submit">{{config('properties.text.search')}}</button>

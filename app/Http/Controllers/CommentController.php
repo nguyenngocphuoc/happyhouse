@@ -39,7 +39,7 @@ class CommentController extends Controller
         $request->validate([
             'name'                 => 'required',
             'email'                => 'required',
-            'content'  => 'required'
+            'content'              => 'required'
         ]);
 
         Comment::create([

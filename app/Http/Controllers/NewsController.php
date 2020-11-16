@@ -41,6 +41,9 @@ class NewsController extends Controller
             'address'       => 'required',
             'coords'       => 'required',
             'image'         => 'required|is_img',
+            'bus_station_distance'         => 'required',
+            'free_first_months'         => 'required',
+            'receiving_time'         => 'required',
             'category_id'   => 'required', 
             'district_id'   => 'required', 
             'statuses_id'     => 'required', 
@@ -55,12 +58,22 @@ class NewsController extends Controller
         ]);
         if(!Gallery::where('news_id',Setting::getRandomId())->exists())
             return redirect()->back()->withErrors(['gallery' => 'you must select at least 1 image']);
+        
         if(isset($request->status)){
             $status = true;
         }else{
             $status = false;
         }
-
+        if(isset($request->is_foreign_nationality_consultation)){
+            $is_foreign_nationality_consultation = true;
+        }else{
+            $is_foreign_nationality_consultation = false;
+        }
+        if(isset($request->is_newly_built_properties)){
+            $is_newly_built_properties = true;
+        }else{
+            $is_newly_built_properties = false;
+        }
         if (strlen($request->image) > 0) {
 
             $image_array_1 = explode(";", $request->image);
@@ -84,6 +97,11 @@ class NewsController extends Controller
             'statuses_id'     => $request->statuses_id,
             'details'       => $request->details,
             'image'         => $imageName,
+            'bus_station_distance'         => $request->bus_station_distance,
+            'free_first_months'         => $request->free_first_months,
+            'is_foreign_nationality_consultation'         => $is_foreign_nationality_consultation,
+            'is_newly_built_properties'         => $is_newly_built_properties,
+            'receiving_time'         => $request->receiving_time,
             'price'         => $request->price,
             'acreage'       => $request->acreage,
             'floor_amount'  => $request->floor_amount,
@@ -129,6 +147,9 @@ class NewsController extends Controller
             'slug'         => 'required|max:191',
             'address'       => 'required',
             'coords'       => 'required',
+            'bus_station_distance'         => 'required',
+            'free_first_months'         => 'required',
+            'receiving_time'         => 'required',
             'details'       => 'required',
             'category_id'   => 'required', 
             'district_id'   => 'required', 
@@ -152,6 +173,16 @@ class NewsController extends Controller
             $status = false;
         }
 
+        if(isset($request->is_foreign_nationality_consultation)){
+            $is_foreign_nationality_consultation = true;
+        }else{
+            $is_foreign_nationality_consultation = false;
+        }
+        if(isset($request->is_newly_built_properties)){
+            $is_newly_built_properties = true;
+        }else{
+            $is_newly_built_properties = false;
+        }
 
         $news = News::findOrFail($news->id);
         if (strlen($request->image) > 0) {
@@ -184,6 +215,11 @@ class NewsController extends Controller
             'statuses_id'     => $request->statuses_id,
             'details'       => $request->details,
             'image'         => $imageName,
+            'bus_station_distance'         => $request->bus_station_distance,
+            'free_first_months'         => $request->free_first_months,
+            'is_foreign_nationality_consultation'         => $is_foreign_nationality_consultation,
+            'is_newly_built_properties'         => $is_newly_built_properties,
+            'receiving_time'         => $request->receiving_time,
             'price'         => $request->price,
             'acreage'       => $request->acreage,
             'floor_amount'  => $request->floor_amount,

@@ -20,6 +20,11 @@ class CreateNewsTable extends Migration
             $table->string('address');
             $table->string('coords');
             $table->string('image');
+            $table->integer('bus_station_distance')->nullable();
+            $table->integer('free_first_months')->default(0);
+            $table->boolean('is_foreign_nationality_consultation')->default(TRUE);
+            $table->boolean('is_newly_built_properties')->default(FALSE);
+            $table->timestamp('receiving_time')->useCurrent();
             $table->longText('details');
             $table->integer('category_id');
             $table->integer('district_id')->unsigned();

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    protected $fillable = ['title', 'slug', 'address', 'coords','details', 'image', 'category_id', 'district_id', 'statuses_id', 'status', 'price', 'acreage', 'floor_amount', 'room_amount','bathroom_amount','bed_amount','host_name','phone_number','note','user_id','view_count', 'tags'];
+    protected $fillable = ['title', 'slug', 'address', 'coords','details', 'image', 'bus_station_distance', 'free_first_months', 'is_foreign_nationality_consultation', 'is_newly_built_properties', 'receiving_time', 'category_id', 'district_id', 'statuses_id', 'status', 'price', 'acreage', 'floor_amount', 'room_amount','bathroom_amount','bed_amount','host_name','phone_number','note','user_id','view_count', 'tags'];
 
     public function category()
     {
@@ -132,6 +132,38 @@ class News extends Model
     {
         if($request->has('room_amount')&&is_numeric($request->room_amount))
             return $query->where('room_amount', '=', $request->room_amount);
+        return $query;
+    }
+
+    public function scopeBusStationDistance($query, $request)
+    {
+        if($request->has('bus_station_distance')&&is_numeric($request->bus_station_distance))
+            return $query->where('bus_station_distance', '<', $request->bus_station_distance);
+        return $query;
+    }
+
+    public function scopeIsNewly($query, $request)
+    {
+        if($request->has('is_newly_built_properties'))
+            return $query->where('is_newly_built_properties', '=', TRUE);
+        return $query;
+    }
+    public function scopeIsForeignNationalityConsultation($query, $request)
+    {
+        if($request->has('is_foreign_nationality_consultation'))
+            return $query->where('is_foreign_nationality_consultation', '=', TRUE);
+        return $query;
+    }
+    public function scopeFreeFirstMonths($query, $request)
+    {
+        if($request->has('free_first_months')&&is_numeric($request->free_first_months))
+            return $query->where('free_first_months', '>=', $request->free_first_months);
+        return $query;
+    }
+    public function scopeReceivingTime($query, $request)
+    {
+        if($request->has('receiving_time')&&is_numeric($request->receiving_time))
+            return $query->whereDate('receiving_time', '<=', $request->receiving_time);
         return $query;
     }
 }

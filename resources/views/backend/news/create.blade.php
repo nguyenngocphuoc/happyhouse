@@ -31,7 +31,12 @@
                     <div class="box-body">
                         <div class="form-group @if($errors->has('slug'))has-error @endif">
                             <label for="newsslug">Slug</label>
-                            <input value="{{ old('slug')}}" type="text" name="slug" class="form-control" id="newsslug">
+                            <!-- 
+                                @php
+                                $slug = old('slug') ? old('slug') : Illuminate\Support\Str::uuid()
+                                @endphp
+                            -->
+                            <input value="{{ $slug}}" type="text" name="slug" class="form-control" id="newsslug">
                             <span class="help-block">{{ $errors->first('slug') }}</span>
                         </div>
                         <div class="form-group @if($errors->has('title'))has-error @endif">
@@ -90,6 +95,45 @@
                             <textarea id="editor1" name="details" placeholder="Nhập nội dung tại đây..."
                                 style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{old('details')}}</textarea>
                             <span class="help-block">{{ $errors->first('details') }}</span>
+                        </div>
+                        <div class="form-group @if($errors->has('bus_station_distance'))has-error @endif">
+                            <label for="bus_station_distance">Khoảng cách đến trạm tàu gần nhất(km)</label>
+                            <input value="{{ old('bus_station_distance')}}" type="number" name="bus_station_distance"
+                                class="form-control" id="bus_station_distance">
+                            <span class="help-block">{{ $errors->first('bus_station_distance') }}</span>
+                        </div>
+                        <div class="checkbox">
+                            <label for="is_foreign_nationality_consultation"><input value="on" type="checkbox"
+                                    name="is_foreign_nationality_consultation" class="form-control"
+                                    id="is_foreign_nationality_consultation"
+                                    {{ old('is_foreign_nationality_consultation') == 'on' ? 'checked' : '' }}> Có thể
+                                tham vấn quốc tịch nước
+                                ngoài
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="is_newly_built_properties">
+                                <input value="on" type="checkbox" name="is_newly_built_properties" class="form-control"
+                                    id="is_newly_built_properties"
+                                    {{ old('is_newly_built_properties') == 'on' ? 'checked' : '' }}> Nhà mới xây
+                            </label>
+                        </div>
+                        <div class="form-group @if($errors->has('receiving_time'))has-error @endif">
+                            <label for="receiving_time">Thời điểm sớm nhất có thể nhận nhà</label>
+                            <!-- 
+                                @php
+                                $receiving_time = old('receiving_time') ? old('receiving_time') : date('Y-m-d')
+                                @endphp
+                            -->
+                            <input value="{{ $receiving_time}}" type="date" name="receiving_time" class="form-control"
+                                id="receiving_time">
+                            <span class="help-block">{{ $errors->first('receiving_time') }}</span>
+                        </div>
+                        <div class="form-group @if($errors->has('free_first_months'))has-error @endif">
+                            <label for="free_first_months">Miễn phí X tháng đầu</label>
+                            <input value="{{ old('free_first_months')}}" type="number" name="free_first_months"
+                                class="form-control" id="free_first_months">
+                            <span class="help-block">{{ $errors->first('free_first_months') }}</span>
                         </div>
                         <div class="form-group @if($errors->has('price'))has-error @endif">
                             <label for="price">Giá</label>
@@ -201,7 +245,8 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="status" checked> Published
+                                <input {{ old('status') == 'on' ? 'checked' : '' }} value="on" type="checkbox"
+                                    name="status"> Published
                             </label>
                         </div>
                     </div>
